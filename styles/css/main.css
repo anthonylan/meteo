@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600");
+body {
+  margin: 0;
+  font-family: "Josefin Sans", sans-serif; }
+
+#navbar {
+  position: fixed;
+  height: 50px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3); }
+  #navbar #form {
+    float: right;
+    padding: 7px 10px 10px 10px; }
+    #navbar #form input {
+      width: 300px;
+      height: 35px;
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+      border-radius: 50px;
+      color: #fff;
+      font-family: "Josefin Sans", sans-serif;
+      font-weight: 300;
+      padding-left: 20px; }
+      #navbar #form input:focus {
+        outline: none; }
+      @media (max-width: 550px) {
+        #navbar #form input {
+          width: 180px; } }
+    #navbar #form ::placeholder {
+      color: #fff; }
+  #navbar .logo {
+    color: #fff;
+    text-decoration: none;
+    float: left;
+    clear: both;
+    padding-top: 20px;
+    padding-left: 10px; }
+
+#hero {
+  height: 100vh;
+  width: 100%;
+  display: table;
+  background: url("../../images/bghome.jpeg") no-repeat;
+  background-size: cover;
+  background-position: center; }
+  #hero .cover {
+    display: table-cell;
+    height: 100%;
+    width: 100%;
+    vertical-align: middle;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.2); }
+    #hero .cover .wrapper {
+      width: 80%;
+      margin: 10px auto; }
+      #hero .cover .wrapper .name {
+        color: #fff;
+        font-weight: 300;
+        font-size: 2.6rem; }
+      #hero .cover .wrapper .circle {
+        width: 240px;
+        height: 240px;
+        margin: 40px auto;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.2); }
+        #hero .cover .wrapper .circle .temp {
+          font-size: 5.5rem;
+          color: #fff;
+          font-weight: 300;
+          margin: 0; }
+        #hero .cover .wrapper .circle .deg {
+          color: #fff;
+          font-size: 1.5rem;
+          display: inline-block;
+          position: relative; }
+        #hero .cover .wrapper .circle .desc {
+          color: #fff;
+          font-size: .8rem; }
+        #hero .cover .wrapper .circle .icon {
+          width: 50px;
+          margin: 10% auto 10px auto; }
