@@ -1,4 +1,4 @@
-//11/12/2018 - github.com/anthonylan
+//12/12/2018 - github.com/anthonylan
 
 
 //A minimal weather condition application built with the "https://openweathermap.org" API
@@ -11,8 +11,8 @@ let icon = document.querySelector('.icon')
 
 //Get Current Weather
 const getCurrentWeather = () => {
-    const apiKey = 'be597df60e28d2c0edbe7312b602eaff'; 
-    const units = 'metric';
+    const apiKey = '<YOUR API KEY>'; 
+    const units = 'metric';  //Set units as celsius
     const cityName = document.querySelector('#keyword').value;
 
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=${units}&&APPID=${apiKey}`)
@@ -26,6 +26,7 @@ const getCurrentWeather = () => {
 
 
         //Show weather Icon for different conditions for both day and night.
+        //It would be alot messier if I use  if/if else statements, so I used swith instead
         switch(weatherIcon){
             //Icon 01 Clear Sky
             case '01n':
@@ -36,10 +37,10 @@ const getCurrentWeather = () => {
             break;
             //Icon 02 Few Clouds
             case '02n':
-            icon.src = '../images/fcloud.png'
+            icon.src = '../images/02.png'
             break;
             case '02d':
-            icon.src = '../images/fcloud.png'
+            icon.src = '../images/02.png'
             break;
             //Icon 03 Scattered Clouds
             case '03n':
@@ -100,7 +101,7 @@ const getCurrentWeather = () => {
 
 //Listen for submit event
 document.querySelector('#form').addEventListener('submit', (e) => {
-    e.preventDefault()
+    e.preventDefault() //Prevent default behaviour
     getCurrentWeather() //Call function
 })
 
